@@ -1,15 +1,18 @@
 #address.py
 
 def ipv4_bin(ip):
-	"""Convert IPv4 address to binary representation"""
+	r"""Convert IPv4 address to binary representation"""
+
 	return ''.join([bin(int(_)+256)[3:] for _ in ip.split('.')])
 
 def ipv6_bin(ip):
-	"""Convert IPv6 address to binary representation"""
+	r"""Convert IPv6 address to binary representation"""
+
 	return ''.join([bin(int(_, 16)+65536)[3:] for _ in ipv6_unpack(ip)])
 
 def ipv6_unpack(ipv6):
-	"""Convert IPv6 address to form with explicit zeros"""
+	r"""Convert IPv6 address to form with explicit zeros"""
+
 	ipv6 = ipv6.split(':')
 	i = ipv6.index('')
 	ipv6[i] = '0'
@@ -18,14 +21,18 @@ def ipv6_unpack(ipv6):
 	return ipv6
 
 def bin_ipv4(ip):
-	"""Convert binary address to decimal IPv4 form"""
+	r"""Convert binary address to decimal IPv4 form"""
+
 	return '.'.join([str(int(ip[i:i+8], 2)) for i in range(0, len(ip), 8)])
 
 def bin_ipv6(ip):
-	"""Convert binary address to hexadecimal IPv6 form"""
+	r"""Convert binary address to hexadecimal IPv6 form"""
+
 	return ':'.join([str(hex(int(ip[i:i+16], 2)))[2:] for i in range(0, len(ip), 16) if int(ip[i:i+16], 2)!=0]) + '::'
 
 def common_prefix(s1, s2, bitmask=129):
+	r"""Finds longest common prefix's length"""
+	
 	l = len(s1)
 
 	if bitmask < l:
