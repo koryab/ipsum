@@ -1,5 +1,7 @@
 import sys
 
+from typing import List
+
 def common_prefix(s1: str, s2: str) -> int:
 	"""Binary search of fullest common prefix"s length for two strings.
 	Accordingly to IP addresses common prefix length
@@ -19,13 +21,13 @@ def common_prefix(s1: str, s2: str) -> int:
 	return r
 
 
-def ipv4_summarize(ip_list: list[str]) -> str:
+def ipv4_summarize(ip_list: List[str]) -> str:
 	"""Summarization IPv4 addresses."""
 
 	def is_valid_ipv4(ipv4: str) -> bool:
 		"""True if IPv4 is valid, else returns False."""
 
-		octets: list[str] = str(ipv4).split(".")
+		octets: List[str] = str(ipv4).split(".")
 		
 		if len(octets) == 4:
 			for octet in octets:
@@ -62,13 +64,13 @@ def ipv4_summarize(ip_list: list[str]) -> str:
 	return bin_ipv4(common_subnet) + "/" + str(bitmask)
 
 
-def ipv6_summarize(ip_list: list[str]) -> str:
+def ipv6_summarize(ip_list: List[str]) -> str:
 	"""Summarization IPv6 addresses."""
 
 	def is_valid_ipv6(ipv6: str) -> bool:
 		"""True if IPv6 is valid, else returns False."""
 
-		octets: list[str] = str(ipv6).split(":")
+		octets: List[str] = str(ipv6).split(":")
 		double_colon: int = 0
 
 		for octet in octets:
@@ -88,13 +90,13 @@ def ipv6_summarize(ip_list: list[str]) -> str:
 
 		return True
 
-	def ipv6_unpack(ipv6: str) -> list[str]:
+	def ipv6_unpack(ipv6: str) -> List[str]:
 		"""Convert IPv6 address to form with explicit zeros."""
 
 		if not is_valid_ipv6(ipv6):
 			raise ValueError(f"Incorrect IPv6 address: {ipv6}")
 		
-		octets: list[str] = ipv6.split(":")
+		octets: List[str] = ipv6.split(":")
 
 		if "" in octets:
 			if octets[-1] == "":
@@ -129,6 +131,11 @@ def ipv6_summarize(ip_list: list[str]) -> str:
 
 
 def main():
+	args: int = len(sys.argv)
+	
+	if args != 3:
+		raise TypeError(f"ipsum takes exactly two arguments")
+
 	path: str = sys.argv[1]
 	version: str = sys.argv[2]
 	ip_list: list = open(path, "r").read().split()	
@@ -137,8 +144,6 @@ def main():
 		print("Result net:", ipv4_summarize(ip_list))
 	elif version == "v6":
 		print("Result net:", ipv6_summarize(ip_list))
-
-	quit()
 
 
 if __name__ == "__main__":

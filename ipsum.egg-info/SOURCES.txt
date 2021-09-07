@@ -1,0 +1,8 @@
+README.md
+setup.py
+ipsum/__init__.py
+ipsum.egg-info/PKG-INFO
+ipsum.egg-info/SOURCES.txt
+ipsum.egg-info/dependency_links.txt
+ipsum.egg-info/requires.txt
+ipsum.egg-info/top_level.txt

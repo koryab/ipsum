@@ -1,6 +1,6 @@
 import pytest
 
-from ipsum import ipv4_summarize, ipv6_summarize
+from ipsum import ipv4_summarize, ipv6_summarize, main
 
 class TestIPSum:
 	@pytest.mark.parametrize("ip_list, expected",[
@@ -59,3 +59,8 @@ class TestIPSum:
 		with pytest.raises(ValueError) as exc_info:
 			ipv6_summarize(ip_list)
 		assert str(exc_info.value) == f"Incorrect IPv6 address: {ip_list[0]}"
+
+	def test_args(self):
+		with pytest.raises(TypeError) as exc_info:
+			main()
+		assert str(exc_info.value) == f"ipsum takes exactly two arguments"
