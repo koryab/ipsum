@@ -30,5 +30,5 @@
  6. Fill bitmask's end with zeros. Convert back to regular form.
  7. Return summarized subnet and it's bitmask.
 
- There used two algorithms binary search **O(log n)** and standart Python sorting - Timsort **O(n log n)**. 
+ There used two algorithms: Binary Search **O(log n)** and standart Python sorting - Timsort **O(n log n)**. 
  Consequently, total complexity is **O(n log n)**.
