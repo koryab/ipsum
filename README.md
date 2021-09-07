@@ -12,6 +12,7 @@
 
  So the whole algorithm of this solution is:
  0. Run app via console
+
      ```console
      For IPv4 addresses
      
