@@ -23,6 +23,8 @@
  ipsum.py path\to\ipv6_list_file v6
 ```
  
+ First console argument is "path\to\ip_list_file", and second one is version of IP protocol "v4" for IPv4 and "v6" for IPv6
+ 
  1. Read IP list from file. App expects that file contents are addresses and spaces separating them.
  2. Start handling addresses. If IPv6 address is compressed with "::", unpack it. Next step are same for both types.
  3. Convert addresses to binary form.
