@@ -13,13 +13,17 @@
  So the whole algorithm of this solution is:
  0. Run app via console
      For IPv4 addresses 
+     
      ```console
      ipsum.py path\to\ipv4_list_file v4
      ```
+     
      Or for IPv6
+     
      ```console
      ipsum.py path\to\ipv4_list_file v4
      ```
+     
  1. Read IP list from file. App expects that file contents are addresses and spaces separating them.
  2. Start handling addresses. If IPv6 address is compressed with "::", unpack it. Next step are same for both types.
  3. Convert addresses to binary form.
