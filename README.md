@@ -12,14 +12,12 @@
 
  So the whole algorithm of this solution is:
  0. Run app via console
-     For IPv4 addresses 
      
+     For IPv4 addresses
      ```console
      ipsum.py path\to\ipv4_list_file v4
-     ```
-     
+     ``
      Or for IPv6
-     
      ```console
      ipsum.py path\to\ipv4_list_file v4
      ```
