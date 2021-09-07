@@ -1,6 +1,6 @@
 README.md
 setup.py
-ipsum/__init__.py
+ipsum/__main__.py
 ipsum.egg-info/PKG-INFO
 ipsum.egg-info/SOURCES.txt
 ipsum.egg-info/dependency_links.txt

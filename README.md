@@ -1,5 +1,6 @@
-# stm_task
- IP addresses summarization app.
+# ipsum
+ IP addresses summarization app, supposed to summarize list of IP addresses to common subnet.
+ IPv4 and IPv6 addresses supported.
 
 # Main solution
  The kernel of app is basic summarization algorithm
@@ -12,7 +13,7 @@
 
  So the whole algorithm of this solution is:
  
- 0. Run app via console
+ 0. Run app via console.
     
      For IPv4 or IPv6 addresses respectively:
     

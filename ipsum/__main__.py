@@ -138,6 +138,10 @@ def main():
 
 	path: str = sys.argv[1]
 	version: str = sys.argv[2]
+
+	if version not in ["v4", "v6"]:
+		raise TypeError("ipsum incorrect version. Expected \"v4\" for IPv4 or \"v6\" for IPv6")
+
 	ip_list: list = open(path, "r").read().split()	
 
 	if version == "v4":

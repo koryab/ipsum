@@ -1,6 +1,6 @@
 import pytest
 
-from ipsum import ipv4_summarize, ipv6_summarize, main
+from ipsum.__main__ import ipv4_summarize, ipv6_summarize, main
 
 class TestIPSum:
 	@pytest.mark.parametrize("ip_list, expected",[
