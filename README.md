@@ -14,7 +14,7 @@
  
  0. Run app via console
     
-     For IPv4 or IPv6 addresses separately
+     For IPv4 or IPv6 addresses respectively:
     
 ```console
  ipsum.py path\to\ipv4_list_file v4
