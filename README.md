@@ -14,7 +14,7 @@
 
 # Installation
  
- Download [package](https://github.com/koryab/ipsum/blob/main/dist/ipsum-0.0.1.tar.gz) from this repository.
+ Download [package](../main/dist/ipsum-0.0.1.tar.gz) from this repository.
  Intstall it using `pip`:
  
  ```console
