@@ -2,8 +2,7 @@
  IP addresses summarization app, supposed to summarize list of IP addresses to common subnet.
  IPv4 and IPv6 addresses supported.
 
-# Main solution
- The kernel of app is basic summarization algorithm
+ The kernel of app is basic summarization algorithm: 
  0. Convert the addresses to binary format and align them in a sorted list.
  1. Locate the bit where the common pattern of digits ends.
  2. Count the number of common bits.
@@ -11,19 +10,27 @@
  but only the first and last addreses. Because they differ the most.
  Finding the longest common prefix implemented using binary search.
 
- So the whole algorithm of this solution is:
+# Installation
  
- 0. Run app via console.
-    
-     For IPv4 or IPv6 addresses respectively:
-    
-```console
- ipsum.py path\to\ipv4_list_file v4
+ Download [package](https://github.com/koryab/ipsum/blob/main/dist/ipsum-0.0.1.tar.gz) from this repository.
+ Intstall it using ```pip```:
+ 
+ ```console
+ python -m pip install path\to\package\ipsum-0.0.1.tar.gz
+ ```
 
- ipsum.py path\to\ipv6_list_file v6
-```
- 
- First console argument is "path\to\ip_list_file", and second one is version of IP protocol "v4" for IPv4 and "v6" for IPv6
+# Run
+ Run app via console.
+ For IPv4 or IPv6 addresses respectively:
+
+ ```console
+  python -m ipsum path\to\ipv4_list_file v4
+
+  python -m ipsum path\to\ipv6_list_file v6
+ ```
+ First console argument is "path\to\ip_list_file", and second one is version of IP protocol "v4" for IPv4 and "v6" for IPv6.
+
+ # Algorithm and complexity  
  
  1. Read IP list from file. App expects that file contents are addresses and spaces separating them.
  2. Start handling addresses. If IPv6 address is compressed with "::", unpack it. Next step are same for both types.
