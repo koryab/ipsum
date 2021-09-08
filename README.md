@@ -7,6 +7,7 @@
  0. Convert the addresses to binary format and align them in a sorted list.
  1. Locate the bit where the common pattern of digits ends.
  2. Count the number of common bits.
+ 
  Only difference for app implementation of this algorithm is that entire list not needed,
  but only the first and last addreses. Because they differ the most.
  Finding the longest common prefix implemented using binary search.
