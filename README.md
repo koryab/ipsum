@@ -3,6 +3,7 @@
  IPv4 and IPv6 addresses supported.
 
  The kernel of app is basic summarization algorithm: 
+ 
  0. Convert the addresses to binary format and align them in a sorted list.
  1. Locate the bit where the common pattern of digits ends.
  2. Count the number of common bits.
@@ -13,7 +14,7 @@
 # Installation
  
  Download [package](https://github.com/koryab/ipsum/blob/main/dist/ipsum-0.0.1.tar.gz) from this repository.
- Intstall it using ```pip```:
+ Intstall it using `pip`:
  
  ```console
  python -m pip install path\to\package\ipsum-0.0.1.tar.gz
