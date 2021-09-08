@@ -30,7 +30,7 @@
 
   python -m ipsum path\to\ipv6_list_file v6
  ```
- First console argument is "path\to\ip_list_file", and second one is version of IP protocol "v4" for IPv4 and "v6" for IPv6.
+ First console argument is "path\to\ip_list_file", and second one is version of IP protocol `v4` for IPv4 and `v6` for IPv6.
 
  # Algorithm and complexity  
  
