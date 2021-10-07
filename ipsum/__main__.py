@@ -3,7 +3,7 @@ import sys
 from typing import List
 
 def common_prefix(s1: str, s2: str) -> int:
-	"""Binary search of fullest common prefix"s length for two strings.
+	"""Binary search of fullest common prefix's length for two strings.
 	Accordingly to IP addresses common prefix length
 	is the same as bitmask length.
 	"""
